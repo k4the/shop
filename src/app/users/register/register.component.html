@@ -1,0 +1,37 @@
+<div id="overlay" (click)="cancel()"></div>
+<div class="slide register" [ngClass]="{ 'slideIn': modalOpen }">
+  <form [formGroup]="registerFormGroup" (ngSubmit)="onSubmit()" class="slideForm">
+    <button class="round close right" (click)="cancel()"><i class="fas fa-times"></i></button>
+    <h2>{{userData.register}}</h2>
+    <label>
+      <i class="fas fa-asterisk"
+        [ngClass]="{ 'invalid': registerFormGroup.controls['email'].invalid && registerFormGroup.controls['email'].dirty,
+      'valid': registerFormGroup.controls['email'].valid }">
+      </i>
+      {{userData.email}}
+      <input type="email" formControlName="email" required email>
+    </label>
+    <div [formGroup]="passwordFormGroup">
+      <label>
+        <i class="fas fa-asterisk"
+          [ngClass]="{ 'invalid': passwordFormGroup.controls['password'].invalid && passwordFormGroup.controls['password'].dirty,
+        'valid': passwordFormGroup.controls['password'].valid }">
+        </i>
+        {{userData.password}}
+        <input type="password" formControlName="password">
+      </label>
+      <label>
+        <i class="fas fa-asterisk"
+          [ngClass]="{ 'invalid': (passwordFormGroup.controls['confirmPassword'].invalid || passwordFormGroup.errors) && passwordFormGroup.controls['confirmPassword'].dirty,
+        'valid': passwordFormGroup.controls['confirmPassword'].valid }">
+        </i>
+        {{userData.confirmPassword}}
+        <input type="password" formControlName="confirmPassword">
+      </label>
+    </div>
+    <div class="center">
+      <button type="submit" [disabled]="!registerFormGroup.valid">{{userData.register}}</button>
+      <!-- <button type="submit">{{userData.register}}</button> -->
+    </div>
+  </form>
+</div>

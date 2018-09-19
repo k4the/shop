@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+
+.register {
+  width: 380px;
+  height: 380px;
+  top: -380px;
+  position: absolute;
+  z-index: 10;
+  background: white;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 4px;
+  right: 20px;
+
+  .registerForm {
+    text-align: left;
+    padding: 15px;
+    position: relative;
+
+    h2 {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $midGrey;
+      margin-bottom: 15px;
+    }
+
+    .close {
+      background: $white;
+      color: $midGrey;
+      position: absolute;
+      right: 10px;
+      width: 26px;
+      height: 26px;
+    }
+
+    .close:hover {
+      background: $melon;
+      color: $white;
+    }
+  }
+
+}
+
+.register.slideIn {
+  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  top: 30px;
+}

@@ -1,0 +1,18 @@
+<div id="overlay" (click)="cancel()"></div>
+<div class="slide" [ngClass]="{ 'slideIn': modalOpen }">
+  <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" class="slideForm">
+    <button class="round close right" (click)="cancel()"><i class="fas fa-times"></i></button>
+    <h2>{{userData.login}}</h2>
+    <label>
+      {{userData.email}}
+      <input type="email" formControlName="email" required email>
+    </label>
+      <label>
+        {{userData.password}}
+        <input type="password" formControlName="password">
+      </label>
+    <div class="center">
+      <button type="submit" [disabled]="!loginFormGroup.valid">{{userData.ok}}</button>
+    </div>
+  </form>
+</div>

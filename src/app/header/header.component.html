@@ -1,0 +1,13 @@
+<header>
+  <div class="flex1">
+    <button class="round menu" (click)="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    <a class="logo uppercase">Excepteur</a>
+  </div>
+  <div class="flex1 right">
+    <a class="register" (click)="register()" routerLinkActive="active" *ngIf="!isLoggedIn" title="Register">Register</a>
+    <button class="round login" (click)="login()" routerLinkActive="active" *ngIf="!isLoggedIn" title="Login"><i class="fas fa-user"></i></button>
+    <button class="round logout" *ngIf="isLoggedIn" (click)="logout()" routerLinkActive="active" title="Logout"><i class="fas fa-sign-out-alt"></i></button>
+  </div>
+</header>
+<app-register *ngIf="showRegister" (registerModalResult)="registerResult()"></app-register>
+<app-login *ngIf="showLogin" (loginModalResult)="loginResult()"></app-login>

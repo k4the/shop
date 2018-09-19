@@ -1,0 +1,258 @@
+$lightGrey: #F8F8F8;
+$midGrey: #F0F0F0;
+$darkGrey: #E8E8E8;
+$darkestGrey: #A9A9A9;
+$white: #fff;
+$blue: #CCEAF4;
+$melon: #FF3B3D;
+$ok: #CCEAF4;
+$warning: orange;
+$danger: #f15e5e75;
+$invalid: #f15e5e75;
+$valid: #B0F358;
+$shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+0 1px 3px 1px rgba(60, 64, 67, 0.149);
+$shadowHover: 0 1px 3px 0 rgba(60, 64, 67, 0.302),
+0 4px 8px 3px rgba(60, 64, 67, 0.149);
+$fontColour: #A9A9A9;
+$fontSize: 14px;
+$fontFamily: 'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif;
+$buttonFontColour: white;
+$inputBgColour: #F8F8F8;
+* {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
+.round {
+    min-width: 20px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+    background: $midGrey;
+    margin: 0;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    box-shadow: $shadow;
+    cursor: pointer;
+    text-align: center;
+    color: $buttonFontColour;
+}
+
+.round:hover {
+  box-shadow: $shadowHover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-weight: 400;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+body {
+    font-family: $fontFamily;
+    color: $fontColour;
+    margin: 0;
+    font-size: $fontSize;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pad10 {
+    padding: 10px;
+}
+
+.bgContrast {
+    background: $blue;
+    padding: 10px 0;
+}
+
+.nine90 {
+    max-width: 990px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.capitalise,
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#overlay {
+    background: #000;
+    opacity: .6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    td,
+    th {
+        border: 1px solid #efefef;
+        text-align: left;
+        padding: 8px;
+    }
+    td .capitalise,
+    th .capitalise {
+        text-transform: capitalize;
+    }
+    tr:hover,
+    tr:nth-child(even):hover {
+        background: $lightGrey;
+    }
+    tr:nth-child(even) {
+        background-color: $lightGrey;
+    }
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    background: $midGrey;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    outline: none;
+}
+
+label {
+  position: relative;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.valid {
+    color: $valid;
+}
+.invalid {
+  color: $invalid;
+}
+
+button {
+    min-width: 100px;
+    width: auto;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    background: $melon;
+    color: $buttonFontColour;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    outline: none;
+    box-shadow: $shadow;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    box-shadow: $shadowHover;
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+#content {
+    padding-bottom: 0;
+    transition: margin-left .5s;
+}
+
+#main {
+    position: relative;
+    min-height: auto;
+}
+
+#sidebar {
+    height: calc(100% - 120px);
+    width: 66px;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+#sidebar.open {
+    width: 200px;
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    #content {
+        // padding-bottom:60px;
+    }
+    #main {
+        // min-height:100%;
+    }
+}
