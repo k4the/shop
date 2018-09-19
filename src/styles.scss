@@ -240,8 +240,8 @@ button:disabled {
     z-index: 1;
     top: 60px;
     left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
+    // overflow-x: hidden;
+    // transition: 0.5s;
 }
 
 #sidebar.open {

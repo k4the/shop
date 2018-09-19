@@ -35,12 +35,12 @@ export class HeaderComponent implements OnInit {
 
   logout(): void {}
 
-  toggleSidebar(): void {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar && sidebar.classList.contains('open')) {
-      sidebar.classList.remove('open');
-    } else {
-      sidebar.classList.add('open');
-    }
-  }
+  // toggleSidebar(): void {
+  //   const sidebar = document.getElementById('sidebar');
+  //   if (sidebar && sidebar.classList.contains('open')) {
+  //     sidebar.classList.remove('open');
+  //   } else {
+  //     sidebar.classList.add('open');
+  //   }
+  // }
 }

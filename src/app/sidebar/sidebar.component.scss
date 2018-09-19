@@ -3,18 +3,16 @@
   padding: 10px;
   a {
     display: block;
-    height: 44px;
-    overflow: hidden;
-    margin-bottom: 15px;
+    height: 48px;
+    margin-bottom: 10px;
     text-decoration: none;
   }
 
-  .round {
+  .round:hover {
     background: $melon;
   }
+}
 
-  .title {
-    margin-left: 10px;
-    display: inline-block;
-  }
+.sidebar a.active .round  {
+  background: $melon;
 }

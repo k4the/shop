@@ -16,8 +16,9 @@ header {
     display: inline-block;
   }
 
-  .menu {
+  .home {
     background: $melon;
+    padding-top: 4px;
   }
 
   .register {
@@ -33,6 +34,7 @@ header {
   .login,
   .logout {
     background: $midGrey;
+    padding-top: 4px;
   }
 
   .login:hover,
